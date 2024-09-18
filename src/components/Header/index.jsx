@@ -1,3 +1,4 @@
+import CartButton from '../CartButton'
 import SearchBar from '../SearchBar'
 import styles from './Header.module.css'
 
@@ -8,7 +9,7 @@ function Header() {
         <div className={styles.header}>
             <div className={styles.container}>
                 <SearchBar />
-                <button>Cart</button>
+                <CartButton />
             </div>
         </div>
         </>
