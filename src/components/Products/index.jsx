@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import styles from './Products.module.css'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import fetchProducts from '../../../api/fetchProducts';
 import ProductCard from '../ProductCard';
 
@@ -13,8 +12,6 @@ function Products() {
             setProducts(response)
         })
     }, [])
-
-    console.log(products)
 
     return ( 
         <>

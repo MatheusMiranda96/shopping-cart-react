@@ -10,7 +10,7 @@ function ProductCard({ data }) {
         <>
             <section className={styles.product__card}>
 
-                <img src={ thumbnail.replace(/\w\.jpg/gi, "W.jpg") } 
+                <img src={ thumbnail.replace(/\w\.jpg/gi, "W.jpg") } /* replace para alterar qualidade da imagem de I para W */
                 alt="product" 
                 className={styles.card__image} 
                 />
