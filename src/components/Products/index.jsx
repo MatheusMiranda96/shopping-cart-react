@@ -15,13 +15,20 @@ function Products() {
 
     return ( 
         <>
+        {products.length > 0 ? (
             <section className={styles.products}>
                 {
                     products.map((product) => <ProductCard key={product.id} data={ product }/>)
                 }
             </section>
+        ) : (
+            
+            <div className={styles.carregando}>
+                <span>Carregando produtos...</span>
+            </div>
+        )}
         </>
-     );
+    );
 }
 
 export default Products;
