@@ -19,7 +19,9 @@ function Products() {
     return ( 
         <>
             <section className={styles.products}>
-                <ProductCard />
+                {
+                    products.map((product) => <ProductCard key={product.id} data={ product }/>)
+                }
             </section>
         </>
      );
