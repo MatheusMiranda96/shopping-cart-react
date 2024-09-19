@@ -2,32 +2,29 @@ import styles from './Products.module.css'
 import { useState, useEffect } from 'react';
 import fetchProducts from '../../../api/fetchProducts';
 import ProductCard from '../ProductCard';
+import Loading from '../Loading';
 
 function Products() {
 
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState([true])
 
     useEffect(() => {
         fetchProducts('iphone').then((response) => {
             setProducts(response)
+            setLoading(false)
         })
     }, [])
 
-    return ( 
-        <>
-        {products.length > 0 ? (
+    return (     
+        ( loading && <Loading /> ) || ( 
             <section className={styles.products}>
                 {
                     products.map((product) => <ProductCard key={product.id} data={ product }/>)
                 }
             </section>
-        ) : (
-            
-            <div className={styles.carregando}>
-                <span>Carregando produtos...</span>
-            </div>
-        )}
-        </>
+         )
+                 
     );
 }
 
