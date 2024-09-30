@@ -1,17 +1,20 @@
 import { HiOutlineSearch } from 'react-icons/hi';
 import styles from './SearchBar.module.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import AppContext from '../../context/AppContext'
 import fetchProducts from '../../../api/fetchProducts'
 
 function SearchBar() {
 
     const [searchValue, setSearchValue] = useState('');
+    const { setProducts } = useContext(AppContext)
 
     const handleSearch = async (event) => {
         event.preventDefault();
         
         const products = await fetchProducts(searchValue);
-        console.log(products);
+
+        setProducts(products);
         setSearchValue('');
     }
 
