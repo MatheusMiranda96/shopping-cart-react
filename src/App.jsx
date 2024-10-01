@@ -1,3 +1,4 @@
+import Carrinho from "./components/Carrinho/carrinho";
 import Header from "./components/Header";
 import Products from "./components/Products";
 import Provider from "./context/Provider";
@@ -9,6 +10,7 @@ function App() {
     <Provider>
       <Header />
       <Products />
+      <Carrinho />
     </Provider>
   )
 }
