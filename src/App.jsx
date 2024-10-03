@@ -1,4 +1,4 @@
-import Carrinho from "./components/Carrinho/carrinho";
+import Carrinho from "./components/Carrinho/Carrinho";
 import Header from "./components/Header";
 import Products from "./components/Products";
 import Provider from "./context/Provider";
