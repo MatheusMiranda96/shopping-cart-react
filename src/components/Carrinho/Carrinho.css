@@ -9,6 +9,8 @@
     padding: 100px 20px 20px ;
     display: flex;
     flex-direction: column;
+    transform: translate(110%, 0); /*Recolhe o carrinho*/
+    transition: all 400ms ease;
 }
 
 .cart_items {
@@ -25,4 +27,8 @@
 
 .cart_items .cart_item:last-child {
     border-bottom: none;
+}
+
+.cart--active {
+    transform: translate(0, 0);
 }
